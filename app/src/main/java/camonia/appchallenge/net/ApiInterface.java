@@ -1,12 +1,10 @@
 package camonia.appchallenge.net;
 
-import org.json.JSONObject;
+import org.json.JSONArray;
 
 
-import camonia.appchallenge.FlightResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -23,7 +21,11 @@ public interface ApiInterface {
                                    @Query("one-way") String oneWay,
                                    @Query("direct") String direct);
 
-
+    @GET("atibeacon/beacons/1/")
+    Call<JSONArray> getBeacon(@Query("appID") String appId,
+                              @Query("appKey") String apiKey,
+                              @Query("airportCode") String airportCode,
+                              @Query("preservePendingNewBeacons") String pendingBeacon);
 
 }
 

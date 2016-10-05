@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 23
     buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "camonia.appchallenge"
-        minSdkVersion 17
-        targetSdkVersion 24
+        minSdkVersion 21
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -31,4 +31,9 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'org.altbeacon:android-beacon-library:2.9.1'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+    compile 'uk.co.alt236:bluetooth-le-library-android:1.0.0'
+
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
 }
